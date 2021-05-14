@@ -25,10 +25,10 @@ def results():
     print("*" * 80)
 
     print("=" * 80) 
-    txt1 = "Bookie Odd: {:.2f} {:.2f}%".format(bookie_odds,bookie_probs)
+    txt1 = "Bookie Odd: {:.2f} or {:.2f}%".format(bookie_odds,bookie_probs)
     print(txt1.center(80)) 
     print("-" * 80)
-    txt2 = "My Odd: {:.2f} {:.2f}%".format(my_odds,my_probs) 
+    txt2 = "My Odd: {:.2f} or {:.2f}%".format(my_odds,my_probs) 
     print(txt2.center(80))
     print("-" * 80)
 
