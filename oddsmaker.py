@@ -48,7 +48,7 @@ while True:
 
     try:
         print("=" * 80)        
-        intro = pyfiglet.figlet_format("Football Betting")
+        intro = pyfiglet.figlet_format("Oddsmaker 1.0")
         print(intro)
         print("=" * 80)
         print("Use decimal point (.) instead of decimal comma (,)".center(80))
