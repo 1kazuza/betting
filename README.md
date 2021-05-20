@@ -1,1 +1,1 @@
-Hello, everyone!
+A football betting App CLI.
