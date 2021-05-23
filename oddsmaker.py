@@ -1,7 +1,7 @@
 import pyfiglet
 from termcolor import colored
-import os
 import argparse
+import os
 
 parser = argparse.ArgumentParser(description = "This program helps to estimate expected value of football betting.")
 parser.add_argument("-v", action = "version", version = "Oddsmaker 1.0")
