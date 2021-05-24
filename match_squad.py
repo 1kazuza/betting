@@ -109,10 +109,10 @@ while True:
         print(intro)
         print("=" * 80)
 
-        db_name = input(" Choose Your DataBase: ")
+        db_name = input(" Choose Your DataBase: ").capitalize()
         os.system("clear") 
         db = "USE {} ".format(db_name)
-        connect = sqlalchemy.create_engine("mysql+pymysql://user_name:password@localhost:3306")        
+        connect = sqlalchemy.create_engine("mysql+pymysql://root:Hdt24p5t@@localhost:3306")        
         connect.execute(db)    
         
         try:   
