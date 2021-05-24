@@ -1,1 +1,1 @@
-A football betting App CLI.
+Some football(soccer) betting App CLI.
