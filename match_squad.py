@@ -111,6 +111,10 @@ try:
             intro = pyfiglet.figlet_format(" Match Squad 1.0")
             print(intro)
             print("=" * 80)
+            print("A football betting App CLI".center(80))
+            print("=" * 80)
+            print("For exit, type: CTRL + C".center(80))
+            print("=" * 80)
 
             db_name = input(" Choose Your DataBase: ").capitalize()
             os.system("clear") 
