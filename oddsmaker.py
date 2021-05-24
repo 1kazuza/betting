@@ -93,11 +93,20 @@ while True:
                 print("-" * 80)
                 exit()
             elif (question != "y"):
-                print("-" * 80)
-                terminate = "Try again!"
-                print(colored(terminate.center(80), "blue", "on_green"))
-                print("-" * 80)
-                exit()         
+                while (question != "y"):
+                    os.system("clear")
+                    print("=" * 80)
+                    terminate = "Try again!"
+                    print(colored(terminate.center(80), "blue", "on_green"))
+                    print("=" * 80)
+                    question = str(input("Want to continue? [y/n]: ")).lower()                    
+                    os.system("clear")
+                    if (question == "n"):                            
+                        print("-" * 80)
+                        final_2 = "Finished... Good luck!"
+                        print(colored(final_2.center(80), "blue", "on_green"))
+                        print("-" * 80)
+                        exit()                
 
     except ValueError:
         os.system("clear")
