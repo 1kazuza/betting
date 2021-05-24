@@ -7,6 +7,7 @@ import pymysql
 import os
 import pyfiglet
 import argparse
+import sys
 
 parser = argparse.ArgumentParser(description = "This program shows metrics about football(soccer) teams perfomance.")
 parser.add_argument("-v", action = "version", version = "Match Squad 1.0")
@@ -101,61 +102,67 @@ def away():
     print(frame_new.to_string(index=False))
     print("=" * 70)
 
-while True:
+try:
 
-    try:
-        print("=" * 80)
-        intro = pyfiglet.figlet_format(" Match Squad 1.0")
-        print(intro)
-        print("=" * 80)
+    while True:
 
-        db_name = input(" Choose Your DataBase: ").capitalize()
-        os.system("clear") 
-        db = "USE {} ".format(db_name)
-        connect = sqlalchemy.create_engine("mysql+pymysql://root:Hdt24p5t@@localhost:3306")        
-        connect.execute(db)    
-        
-        try:   
-            total()
-            home()
-            away()
+        try:
+            print("=" * 80)
+            intro = pyfiglet.figlet_format(" Match Squad 1.0")
+            print(intro)
+            print("=" * 80)
 
-            question = str(input("Want to continue? [y/n]: ")).lower()
-            os.system("clear")
+            db_name = input(" Choose Your DataBase: ").capitalize()
+            os.system("clear") 
+            db = "USE {} ".format(db_name)
+            connect = sqlalchemy.create_engine("mysql+pymysql://root:Hdt24p5t@@localhost:3306")        
+            connect.execute(db)    
+            
+            try:   
+                total()
+                home()
+                away()
 
-            if (question == "n"):                               
-                print("=" * 80)
-                print("Next time!".center(80))
-                print("=" * 80)
-                exit()
-            elif (question != "y"):
-                print("=" * 80)
-                print("Type a Correct Database!".center(80))
-                print("=" * 80)
                 question = str(input("Want to continue? [y/n]: ")).lower()
                 os.system("clear")
-                if (question == "n"):                    
+
+                if (question == "n"):                               
                     print("=" * 80)
                     print("Next time!".center(80))
                     print("=" * 80)
                     exit()
                 elif (question != "y"):
-                    while (question != "y"):
-                        os.system("clear")
+                    print("=" * 80)
+                    print("Type a Correct Database!".center(80))
+                    print("=" * 80)
+                    question = str(input("Want to continue? [y/n]: ")).lower()
+                    os.system("clear")
+                    if (question == "n"):                    
                         print("=" * 80)
-                        print("Type a Correct Database!".center(80))
+                        print("Next time!".center(80))
                         print("=" * 80)
-                        question = str(input("Want to continue? [y/n]: ")).lower()                    
-                        os.system("clear")
-                        if (question == "n"):                            
+                        exit()
+                    elif (question != "y"):
+                        while (question != "y"):
+                            os.system("clear")
                             print("=" * 80)
-                            print("Next time!".center(80))
+                            print("Type a Correct Database!".center(80))
                             print("=" * 80)
-                            exit()
+                            question = str(input("Want to continue? [y/n]: ")).lower()                    
+                            os.system("clear")
+                            if (question == "n"):                            
+                                print("=" * 80)
+                                print("Next time!".center(80))
+                                print("=" * 80)
+                                exit()
 
-        except ValueError:
-            os.system("clear")
+            except ValueError:
+                os.system("clear")
 
-    except SQLAlchemyError as e:
-        error = str(e.__dict__['orig'])        
-        os.system("clear")    
+        except SQLAlchemyError as e:
+            error = str(e.__dict__['orig'])        
+            os.system("clear")    
+
+except KeyboardInterrupt:
+    os.system("clear")
+    sys.exit(0)
