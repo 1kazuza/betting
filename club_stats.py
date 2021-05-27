@@ -127,7 +127,7 @@ try:
                 home()
                 away()
 
-                question = str(input("Want to continue? [y/n]: ")).lower()
+                question = str(input(" Want to continue? [y/n]: ")).lower()
                 os.system("clear")
 
                 if (question == "n"):                               
@@ -139,7 +139,7 @@ try:
                     print("=" * 80)
                     print("Type a Correct Database!".center(80))
                     print("=" * 80)
-                    question = str(input("Want to continue? [y/n]: ")).lower()
+                    question = str(input(" Want to continue? [y/n]: ")).lower()
                     os.system("clear")
                     if (question == "n"):                    
                         print("=" * 80)
@@ -152,7 +152,7 @@ try:
                             print("=" * 80)
                             print("Type a Correct Database!".center(80))
                             print("=" * 80)
-                            question = str(input("Want to continue? [y/n]: ")).lower()                    
+                            question = str(input(" Want to continue? [y/n]: ")).lower()                    
                             os.system("clear")
                             if (question == "n"):                            
                                 print("=" * 80)
