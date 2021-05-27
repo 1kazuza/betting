@@ -4,7 +4,7 @@ import argparse
 import os
 import sys
 
-parser = argparse.ArgumentParser(description = "This program helps to estimate expected value of football betting.")
+parser = argparse.ArgumentParser(description = "This program helps to estimate expected value in football betting.")
 parser.add_argument("-v", action = "version", version = "Oddsmaker 1.0")
 msg = parser.parse_args()
 
