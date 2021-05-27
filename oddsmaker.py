@@ -10,7 +10,8 @@ msg = parser.parse_args()
 
 os.system("clear")
 
-global back_odds, back_probs, lay_odds, lay_probs, my_odds, my_probs, diff_odds, odds_sum, margin, fair_back_probs, fair_lay_probs, fair_back, fair_lay
+global back_odds, back_probs, lay_odds, lay_probs, my_odds, my_probs, diff_odds, odds_sum, margin, 
+global fair_back_probs, fair_lay_probs, fair_back, fair_lay
 
 def results():
 
