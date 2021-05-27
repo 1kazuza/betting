@@ -116,7 +116,7 @@ try:
             print("For exit, type: CTRL + C".center(80))
             print("=" * 80)
 
-            db_name = input(" Choose Your DataBase: ").capitalize()
+            db_name = input(" Choose Your Database: ").capitalize()
             os.system("clear") 
             db = "USE {} ".format(db_name)
             connect = sqlalchemy.create_engine("mysql+pymysql://root:Hdt24p5t@@localhost:3306")        

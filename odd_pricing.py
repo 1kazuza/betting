@@ -96,7 +96,7 @@ try:
                     while (question != "y"):
                         os.system("clear")
                         print("=" * 80)
-                        print("Type a Correct Database!".center(80))
+                        print("Type a Correct Data!".center(80))
                         print("=" * 80)
                         question = str(input(" Want to continue? [y/n]: ")).lower()                    
                         os.system("clear")
