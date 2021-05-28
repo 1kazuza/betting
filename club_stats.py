@@ -35,14 +35,14 @@ def total():
     frame_new = frame.rename(columns={"Aprov" : "(%)Goals For", "Avg_Goals_For" : "Avg.Goals For", "Avg_Goals_Against" : "Avg.Goals Against"})  
     frame_new = frame_new.sort_values(by="(%)Goals For", ascending=False)
 
-    print("=" * 70) 
-    print("BRAZILIAN FOOTBALL DATA".center(70)) 
-    print("=" * 70) 
-    print("-" * 70)
-    print("Total Results".center(70))
-    print("-" * 70)
+    print("=" * 82) 
+    print("BRAZILIAN FOOTBALL DATA".center(82)) 
+    print("=" * 82) 
+    print("-" * 82)
+    print("Total Results".center(82))
+    print("-" * 82)
     print(frame_new.to_string(index=False))
-    print("=" * 70)
+    print("=" * 82)
 
 def home():
 
@@ -64,14 +64,14 @@ def home():
     frame_new = frame.rename(columns={"Aprov" : "(%)Goals For", "Avg_Goals_For" : "Avg.Goals For", "Avg_Goals_Against" : "Avg.Goals Against"})  
     frame_new = frame_new.sort_values(by="(%)Goals For", ascending=False)
 
-    print("=" * 70) 
-    print("BRAZILIAN FOOTBALL DATA".center(70)) 
-    print("=" * 70) 
-    print("-" * 70)
-    print("Home Results".center(70))
-    print("-" * 70)
+    print("=" * 82) 
+    print("BRAZILIAN FOOTBALL DATA".center(82)) 
+    print("=" * 82) 
+    print("-" * 82)
+    print("Home Results".center(82))
+    print("-" * 82)
     print(frame_new.to_string(index=False))
-    print("=" * 70)
+    print("=" * 82)
 
 def away():
 
@@ -93,28 +93,28 @@ def away():
     frame_new = frame.rename(columns={"Aprov" : "(%)Goals For", "Avg_Goals_For" : "Avg.Goals For", "Avg_Goals_Against" : "Avg.Goals Against"})  
     frame_new = frame_new.sort_values(by="(%)Goals For", ascending=False)
 
-    print("=" * 70) 
-    print("BRAZILIAN FOOTBALL DATA".center(70)) 
-    print("=" * 70) 
-    print("-" * 70)
-    print("Away Results".center(70))
-    print("-" * 70)
+    print("=" * 82) 
+    print("BRAZILIAN FOOTBALL DATA".center(82)) 
+    print("=" * 82) 
+    print("-" * 82)
+    print("Away Results".center(82))
+    print("-" * 82)
     print(frame_new.to_string(index=False))
-    print("=" * 70)
+    print("=" * 82)
 
 try:
 
     while True:
 
         try:
-            print("=" * 80)
+            print("=" * 82)
             intro = pyfiglet.figlet_format(" Club Stats 1.0")
             print(intro)
-            print("=" * 80)
-            print("A football betting App CLI".center(80))
-            print("=" * 80)
-            print("For exit, type: CTRL + C".center(80))
-            print("=" * 80)
+            print("=" * 82)
+            print("A football betting App CLI".center(82))
+            print("=" * 82)
+            print("For exit, type: CTRL + C".center(82))
+            print("=" * 82)
 
             db_name = input(" Choose Your Database: ").capitalize()
             os.system("clear") 
@@ -131,33 +131,33 @@ try:
                 os.system("clear")
 
                 if (question == "n"):                               
-                    print("=" * 80)
-                    print("Next time!".center(80))
-                    print("=" * 80)
+                    print("=" * 82)
+                    print("Next time!".center(82))
+                    print("=" * 82)
                     exit()
                 elif (question != "y"):
-                    print("=" * 80)
-                    print("Type a Correct Database!".center(80))
-                    print("=" * 80)
+                    print("=" * 82)
+                    print("Type a Correct Database!".center(82))
+                    print("=" * 82)
                     question = str(input(" Want to continue? [y/n]: ")).lower()
                     os.system("clear")
                     if (question == "n"):                    
-                        print("=" * 80)
-                        print("Next time!".center(80))
-                        print("=" * 80)
+                        print("=" * 82)
+                        print("Next time!".center(82))
+                        print("=" * 82)
                         exit()
                     elif (question != "y"):
                         while (question != "y"):
                             os.system("clear")
-                            print("=" * 80)
-                            print("Type a Correct Database!".center(80))
-                            print("=" * 80)
+                            print("=" * 82)
+                            print("Type a Correct Database!".center(82))
+                            print("=" * 82)
                             question = str(input(" Want to continue? [y/n]: ")).lower()                    
                             os.system("clear")
                             if (question == "n"):                            
-                                print("=" * 80)
-                                print("Next time!".center(80))
-                                print("=" * 80)
+                                print("=" * 82)
+                                print("Next time!".center(82))
+                                print("=" * 82)
                                 exit()
 
             except ValueError:

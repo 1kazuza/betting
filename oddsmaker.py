@@ -15,51 +15,51 @@ global fair_back_probs, fair_lay_probs, fair_back, fair_lay
 
 def results():
 
-    print("*" * 80)
+    print("*" * 82)
     title = "ODDs Comparision"
-    print(title.center(80))
+    print(title.center(82))
     print("")
-    print("*" * 80)
-    print("=" * 80)
+    print("*" * 82)
+    print("=" * 82)
     fair = "Fair Odds"
-    print(colored(fair.center(80), "white", "on_blue")) 
-    print("=" * 80)    
-    print(f"Back: @{fair_back:.2f} or {fair_back_probs:.2%} | Lay: @{fair_lay:.2f} or {fair_lay_probs:.2%}".center(80))
-    print("-" * 80)    
-    print(f"Bookie Margin: {margin:.2%}".center(80))
-    print("=" * 80)  
+    print(colored(fair.center(82), "white", "on_blue")) 
+    print("=" * 82)    
+    print(f"Back: @{fair_back:.2f} or {fair_back_probs:.2%} | Lay: @{fair_lay:.2f} or {fair_lay_probs:.2%}".center(82))
+    print("-" * 82)    
+    print(f"Bookie Margin: {margin:.2%}".center(82))
+    print("=" * 82)  
     odd = "My Odd (in Back)"  
-    print(colored(odd.center(80), "white", "on_blue"))
-    print("=" * 80)
-    print(f"@{my_odds:.2f} or {my_probs:.2f}%".center(80))
-    print("-" * 80)
+    print(colored(odd.center(82), "white", "on_blue"))
+    print("=" * 82)
+    print(f"@{my_odds:.2f} or {my_probs:.2f}%".center(82))
+    print("-" * 82)
 
     if (diff_odds > 0):
         result_3 = "Positive Expected Value: +{:.2%} (profit)".format(diff_odds) 
-        print(colored(result_3.center(80), "green"))
+        print(colored(result_3.center(82), "green"))
     elif (diff_odds == 0):
         result_4 = "Null Expected Value: {:.2%} (breakeven)".format(diff_odds) 
-        print(colored(result_4.center(80), "yellow"))
+        print(colored(result_4.center(82), "yellow"))
     else:
         result_5 = "Negative Expected Value: {:.2%} (loss)".format(diff_odds) 
-        print(colored(result_5.center(80), "red"))  
+        print(colored(result_5.center(82), "red"))  
     
-    print("-" * 80)
+    print("-" * 82)
  
 try:    
 
     while True:
 
         try:
-            print("=" * 80)        
+            print("=" * 82)        
             intro = pyfiglet.figlet_format(" Oddsmaker 1.0")
             print(intro)
-            print("=" * 80)        
-            print("A football betting App CLI".center(80))
-            print("Use decimal point (.) instead of decimal comma (,)".center(80))
-            print("=" * 80)
-            print("For exit, type: CTRL + C".center(80))
-            print("=" * 80)            
+            print("=" * 82)        
+            print("A football betting App CLI".center(82))
+            print("Use decimal point (.) instead of decimal comma (,)".center(82))
+            print("=" * 82)
+            print("For exit, type: CTRL + C".center(82))
+            print("=" * 82)            
 
             back_odds = float(input(" Back Bookmaker Odd: "))
             back_probs = float(1/back_odds) 
@@ -82,38 +82,38 @@ try:
             os.system("clear")                        
 
             if (question == "n"):
-                print("-" * 80)
+                print("-" * 82)
                 final_1 = "Finished... Good luck!"
-                print(colored(final_1.center(80), "blue", "on_green"))
-                print("-" * 80)
+                print(colored(final_1.center(82), "blue", "on_green"))
+                print("-" * 82)
                 exit()                
             elif (question != "y"):
-                print("=" * 80)
+                print("=" * 82)
                 msg = "Type 'y' for YES or 'n' for NO (in the last question)..."    
-                print(colored(msg.center(80), "white", "on_red"))
-                print("=" * 80)    
+                print(colored(msg.center(82), "white", "on_red"))
+                print("=" * 82)    
                 question = str(input(" Want to continue? [y,n]: ")).lower()
                 os.system("clear")
                 if (question == "n"):
-                    print("-" * 80)
+                    print("-" * 82)
                     final_2 = "Finished... Good luck!"
-                    print(colored(final_2.center(80), "blue", "on_green"))
-                    print("-" * 80)
+                    print(colored(final_2.center(82), "blue", "on_green"))
+                    print("-" * 82)
                     exit()
                 elif (question != "y"):
                     while (question != "y"):
                         os.system("clear")
-                        print("=" * 80)
+                        print("=" * 82)
                         terminate = "Try again!"
-                        print(colored(terminate.center(80), "blue", "on_green"))
-                        print("=" * 80)
+                        print(colored(terminate.center(82), "blue", "on_green"))
+                        print("=" * 82)
                         question = str(input("Want to continue? [y/n]: ")).lower()                    
                         os.system("clear")
                         if (question == "n"):                            
-                            print("-" * 80)
+                            print("-" * 82)
                             final_2 = "Finished... Good luck!"
-                            print(colored(final_2.center(80), "blue", "on_green"))
-                            print("-" * 80)
+                            print(colored(final_2.center(82), "blue", "on_green"))
+                            print("-" * 82)
                             exit()                
 
         except ValueError:
