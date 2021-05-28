@@ -164,7 +164,7 @@ try:
             draw_probs = str(draw_probs) + "%"
             away_probs = str(away_probs) + "%"
 
-            main_line = "OVER 2.5: {} - {} | UNDER 2.5: {} - {}".format(odd_o_25, over2_5, odd_u_25, under2_5, sum2_5)            
+            main_line = "OVER 2.5: {} - {} | UNDER 2.5: {} - {} | {}".format(odd_o_25, over2_5, odd_u_25, under2_5, sum2_5)            
             match_odds = "HOME: {} - {} | DRAW: {} - {} | AWAY: {} - {} | {}".format(home_odd, home_probs, draw_odd, draw_probs, away_odd, away_probs, sum_probs)
             goals0_5 = "OVER 0.5: {} - {} | UNDER 0.5: {} - {} | {}".format(odd_o_05, over0_5, odd_u_05, under0_5, sum0_5)
             goals1_5 = "OVER 1.5: {} - {} | UNDER 1.5: {} - {} | {}".format(odd_o_15, over1_5, odd_u_15, under1_5, sum1_5)
