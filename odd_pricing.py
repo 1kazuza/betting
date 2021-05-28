@@ -69,26 +69,47 @@ try:
             
             os.system("clear")       
             
-            under0_5 = line0[0]
-            over0_5 = (100 - under0_5)
+            under0_5 = (line0[0]).round(2)
+            over0_5 = (100 - under0_5).round(2)
 
-            under1_5 = under0_5 + line1[0] + line0[1]
-            over1_5 = (100 - under1_5)
+            under1_5 = (under0_5 + line1[0] + line0[1]).round(2)
+            over1_5 = (100 - under1_5).round(2)
 
-            under2_5 = under1_5 + line0[2] + line1[1] + line2[0]
-            over2_5 = (100 - under2_5)
+            under2_5 = (under1_5 + line0[2] + line1[1] + line2[0]).round(2)
+            over2_5 = (100 - under2_5).round(2)
 
-            under3_5 = under2_5 + line0[3] + line1[2] + line2[1]
-            over3_5 = (100 - under3_5)
+            under3_5 = (under2_5 + line0[3] + line1[2] + line2[1]).round(2)
+            over3_5 = (100 - under3_5).round(2)
 
-            under4_5 = under3_5 + line0[4] + line1[3] + line2[2] + line3[1] + line4[0]
-            over4_5 = (100 - under4_5)
+            under4_5 = (under3_5 + line0[4] + line1[3] + line2[2] + line3[1] + line4[0]).round(2)
+            over4_5 = (100 - under4_5).round(2)
 
-            under5_5 = under4_5 + line0[5] + line1[4] + line2[3] + line3[2] + line4[1] + line5[0]
-            over5_5 = (100 - under5_5)
+            under5_5 = (under4_5 + line0[5] + line1[4] + line2[3] + line3[2] + line4[1] + line5[0]).round(2)
+            over5_5 = (100 - under5_5).round(2)
 
-            under6_5 = under5_5 + line0[6] + line1[5] + line2[4] + line3[3] + line4[2] + line5[1] + line6[0]
-            over6_5 = (100 - under6_5)
+            under6_5 = (under5_5 + line0[6] + line1[5] + line2[4] + line3[3] + line4[2] + line5[1] + line6[0]).round(2)
+            over6_5 = (100 - under6_5).round(2)
+
+            sum0_5 = (over0_5 + under0_5)
+            sum0_5 = str(sum0_5) + "%"
+
+            sum1_5 = (over1_5 + under1_5)
+            sum1_5 = str(sum1_5) + "%"
+
+            sum2_5 = (over2_5 + under2_5)
+            sum2_5 = str(sum2_5) + "%"
+
+            sum3_5 = (over3_5 + under3_5)
+            sum3_5 = str(sum3_5) + "%"
+
+            sum4_5 = (over4_5 + under4_5)
+            sum4_5 = str(sum4_5) + "%"
+
+            sum5_5 = (over5_5 + under5_5)
+            sum5_5 = str(sum5_5) + "%"  
+
+            sum6_5 = (over6_5 + under6_5)
+            sum6_5 = str(sum6_5) + "%"  
 
             odd_u_05 = (100 / under0_5).round(2) 
             odd_o_05 = (100 / over0_5).round(2) 
@@ -125,16 +146,55 @@ try:
             under6_5 = str(under6_5) + "%"
             over6_5 = str(over6_5) + "%"     
 
-            main_line = " OVER 2.5: {} - {} | UNDER 2.5: {} - {}".format(odd_o_25, over2_5, odd_u_25, under2_5)            
+            home_probs = line1[0] + sum(line2[0:2]) + sum(line3[0:3]) + sum(line4[0:4]) + sum(line5[0:5]) + sum(line6[0:6])
+            draw_probs = line0[0] + line1[1] + line2[2] + line3[3] + line4[4] + line5[5] + line6[6]
+            away_probs = sum(line0[1:7]) + sum(line1[2:7]) + sum(line2[3:7]) + sum(line3[4:7]) + sum(line4[5:7]) + line5[6] 
+
+            home_probs = home_probs.round(2)
+            draw_probs = draw_probs.round(2)
+            away_probs = away_probs.round(2)
+            sum_probs = (home_probs + draw_probs + away_probs).round(2)
+            sum_probs = str(sum_probs) + "%"            
+
+            home_odd = (100 / home_probs).round(2)
+            draw_odd = (100 / draw_probs).round(2)
+            away_odd = (100 / away_probs).round(2)
+
+            home_probs = str(home_probs) + "%"
+            draw_probs = str(draw_probs) + "%"
+            away_probs = str(away_probs) + "%"
+
+            main_line = "OVER 2.5: {} - {} | UNDER 2.5: {} - {}".format(odd_o_25, over2_5, odd_u_25, under2_5, sum2_5)            
+            match_odds = "HOME: {} - {} | DRAW: {} - {} | AWAY: {} - {} | {}".format(home_odd, home_probs, draw_odd, draw_probs, away_odd, away_probs, sum_probs)
+            goals0_5 = "OVER 0.5: {} - {} | UNDER 0.5: {} - {} | {}".format(odd_o_05, over0_5, odd_u_05, under0_5, sum0_5)
+            goals1_5 = "OVER 1.5: {} - {} | UNDER 1.5: {} - {} | {}".format(odd_o_15, over1_5, odd_u_15, under1_5, sum1_5)
+            goals3_5 = "OVER 3.5: {} - {} | UNDER 3.5: {} - {} | {}".format(odd_o_35, over3_5, odd_u_35, under3_5, sum3_5)
+            goals4_5 = "OVER 4.5: {} - {} | UNDER 4.5: {} - {} | {}".format(odd_o_45, over4_5, odd_u_45, under4_5, sum4_5)
+            goals5_5 = "OVER 5.5: {} - {} | UNDER 5.5: {} - {} | {}".format(odd_o_55, over5_5, odd_u_55, under5_5, sum5_5)
+            goals6_5 = "OVER 6.5: {} - {} | UNDER 6.5: {} - {} | {}".format(odd_o_65, over6_5, odd_u_65, under6_5, sum6_5)
 
             print("=" * 82)
             print(" ASIAN HANDICAP | TOTAL GOALS".center(80))
             print("=" * 82)
-            print("", "Match Expected Goals", round(match_goals_expectancy, 2), "|", "Home Expected Goals:", round(home_goals_expectancy, 2), "|", "Away Expected Goals:", round(away_goals_expectancy, 2))
-            print("-" * 82) 
+            print("", "Match Expected Goals", round(match_goals_expectancy, 2), "|", "Home Expected Goals:", round(home_goals_expectancy, 2), "|", "Away Expected Goals:", round(away_goals_expectancy, 2))                       
+            print("-" * 82)
             print(colored(main_line.center(82), "white", "on_blue"))
             print("-" * 82)
-                       
+            print(colored(match_odds.center(82), "white", "on_red"))
+            print("=" * 82)
+            print(goals0_5.center(82))
+            print("-" * 82)
+            print(goals1_5.center(82))
+            print("-" * 82)
+            print(goals3_5.center(82))
+            print("-" * 82)
+            print(goals4_5.center(82))
+            print("-" * 82)
+            print(goals5_5.center(82))
+            print("-" * 82)
+            print(goals6_5.center(82))
+            print("-" * 82)
+
             question = str(input(" Want to continue? [y/n]: ")).lower()
             os.system("clear")
 
